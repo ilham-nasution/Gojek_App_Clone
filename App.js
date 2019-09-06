@@ -1,11 +1,38 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TextInput} from 'react-native';
 
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1}}>
-        <Text>Bagian Content</Text>
+      <View style={{flex: 1, marginHorizontal: 17}}>
+        <View style={{flexDirection: 'row', marginVertical: 10}}>
+          <View style={{position: 'relative', flex: 3}}>
+            <TextInput
+              placeholder="Coffee, anyone?"
+              style={{
+                borderWidth: 1,
+                borderColor: '#E8E8E8',
+                borderRadius: 25,
+                height: 50,
+                fontSize: 13,
+                paddingLeft: 50,
+                paddingRight: 20,
+              }}
+            />
+            <Image
+              source={require('./image/search.png')}
+              style={{position: 'absolute', top: 14, left: 15}}
+            />
+          </View>
+          <View
+            style={{
+              flex: 0.5,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Image source={require('./image/promo.png')} />
+          </View>
+        </View>
       </View>
       <View
         style={{
@@ -40,10 +67,10 @@ const App = () => {
         <View style={{flex: 1, alignItems: 'center'}}>
           <Image
             style={{width: 26, height: 26}}
-            source={require('./image/help.png')}
+            source={require('./image/chat.png')}
           />
           <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Help
+            Chat
           </Text>
         </View>
         <View style={{flex: 1, alignItems: 'center'}}>

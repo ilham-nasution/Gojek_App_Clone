@@ -33,6 +33,95 @@ const App = () => {
             <Image source={require('./image/promo.png')} />
           </View>
         </View>
+        <View>
+          <View
+            style={{
+              backgroundColor: '#2f63bc',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              paddingHorizontal: 15,
+              paddingVertical: 5,
+              borderTopLeftRadius: 5,
+              borderTopRightRadius: 5,
+            }}>
+            <View style={{flexDirection: 'row'}}>
+              <Image
+                source={require('./image/wallet.png')}
+                style={{width: 22, height: 22}}
+              />
+              <Text
+                style={{
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: 15,
+                  marginLeft: 3,
+                }}>
+                gopay
+              </Text>
+            </View>
+            <Text style={{color: 'white', fontWeight: 'bold', fontSize: 15}}>
+              Rp100.000
+            </Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: '#4e78c0',
+              flexDirection: 'row',
+              alignItems: 'center',
+              paddingVertical: 10,
+              borderBottomRightRadius: 5,
+              borderBottomLeftRadius: 5,
+            }}>
+            <View style={{flex: 1, alignItems: 'center'}}>
+              <Image source={require('./image/pay.png')} />
+              <Text
+                style={{
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  marginTop: 7,
+                }}>
+                Pay
+              </Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'center'}}>
+              <Image source={require('./image/promo2.png')} />
+              <Text
+                style={{
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  marginTop: 7,
+                }}>
+                Promo
+              </Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'center'}}>
+              <Image source={require('./image/topup.png')} />
+              <Text
+                style={{
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  marginTop: 7,
+                }}>
+                Top Up
+              </Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'center'}}>
+              <Image source={require('./image/more.png')} />
+              <Text
+                style={{
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  marginTop: 7,
+                }}>
+                More
+              </Text>
+            </View>
+          </View>
+        </View>
       </View>
       <View
         style={{

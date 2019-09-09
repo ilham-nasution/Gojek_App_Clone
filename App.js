@@ -122,6 +122,28 @@ const App = () => {
             </View>
           </View>
         </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginVertical: 20,
+          }}>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/gojek.png')} />
+            <Text style={{marginTop: 10}}>GO-RIDE</Text>
+          </View>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/gocar.png')} />
+            <Text style={{marginTop: 10}}>GO-CAR</Text>
+          </View>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/food.png')} />
+            <Text style={{marginTop: 10}}>GO-FOOD</Text>
+          </View>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/more.png')} />
+            <Text style={{marginTop: 10}}>MORE</Text>
+          </View>
+        </View>
       </View>
       <View
         style={{

@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, Image, TextInput} from 'react-native';
+import {View, Text, Image, TextInput, ScrollView, Button} from 'react-native';
 
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1, marginHorizontal: 17}}>
+      <ScrollView style={{flex: 1, marginHorizontal: 17}}>
         <View style={{flexDirection: 'row', marginVertical: 10}}>
           <View style={{position: 'relative', flex: 3}}>
             <TextInput
@@ -40,7 +40,7 @@ const App = () => {
               flexDirection: 'row',
               justifyContent: 'space-between',
               paddingHorizontal: 15,
-              paddingVertical: 5,
+              paddingVertical: 10,
               borderTopLeftRadius: 5,
               borderTopRightRadius: 5,
             }}>
@@ -68,7 +68,7 @@ const App = () => {
               backgroundColor: '#4e78c0',
               flexDirection: 'row',
               alignItems: 'center',
-              paddingVertical: 10,
+              paddingVertical: 15,
               borderBottomRightRadius: 5,
               borderBottomLeftRadius: 5,
             }}>
@@ -125,26 +125,77 @@ const App = () => {
         <View
           style={{
             flexDirection: 'row',
-            marginVertical: 20,
+            marginTop: 20,
           }}>
           <View style={{flex: 1, alignItems: 'center'}}>
             <Image source={require('./image/gojek.png')} />
-            <Text style={{marginTop: 10}}>GO-RIDE</Text>
+            <Text style={{marginTop: 10}}>GoRide</Text>
           </View>
           <View style={{flex: 1, alignItems: 'center'}}>
             <Image source={require('./image/gocar.png')} />
-            <Text style={{marginTop: 10}}>GO-CAR</Text>
+            <Text style={{marginTop: 10}}>GoCar</Text>
           </View>
           <View style={{flex: 1, alignItems: 'center'}}>
             <Image source={require('./image/food.png')} />
-            <Text style={{marginTop: 10}}>GO-FOOD</Text>
+            <Text style={{marginTop: 10}}>GoFood</Text>
+          </View>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/gocar.png')} />
+            <Text style={{marginTop: 10}}>GoBluebird</Text>
+          </View>
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginTop: 20,
+          }}>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/gosend.png')} />
+            <Text style={{marginTop: 10}}>GoSend</Text>
+          </View>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/gopulsa.png')} />
+            <Text style={{marginTop: 10}}>GoPulsa</Text>
+          </View>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Image source={require('./image/gopoints.png')} />
+            <Text style={{marginTop: 10}}>GoPoints</Text>
           </View>
           <View style={{flex: 1, alignItems: 'center'}}>
             <Image source={require('./image/more.png')} />
             <Text style={{marginTop: 10}}>MORE</Text>
           </View>
         </View>
-      </View>
+        <View style={{marginTop: 25}}>
+          <Text
+            style={{
+              fontSize: 20,
+              fontWeight: 'bold',
+              paddingBottom: 5,
+              borderBottomWidth: 1,
+              borderColor: '#d9d9d9',
+            }}>
+            Top picks for you
+          </Text>
+          <Image
+            style={{height: 150, width: 350, marginVertical: 10}}
+            source={require('./image/bannerfood.jpg')}
+          />
+          <Text style={{fontWeight: 'bold'}}>Everyday is happy-tummy day!</Text>
+          <Text>
+            Save Rp300.000 and eat more. Get 24 GoFood vouchers worth Rp15.000
+          </Text>
+          <View
+            style={{
+              width: 125,
+              marginVertical: 5,
+              flexDirection: 'row',
+              alignSelf: 'flex-end',
+            }}>
+            <Button color="green" title="Buy voucher" />
+          </View>
+        </View>
+      </ScrollView>
       <View
         style={{
           height: 54,

@@ -1,10 +1,15 @@
 import React from 'react';
 import {View, Text, Image, TextInput, ScrollView, Button} from 'react-native';
+import Gopay_feature from './src/components/atoms/Gopay_feature';
+import Gojek_feature from './src/components/atoms/Gojek_feature';
+import Navbar_icon from './src/components/atoms/Navbar_icon';
+import Resto from './src/components/atoms/Resto';
 
 const App = () => {
   return (
     <View style={{flex: 1}}>
       <ScrollView style={{flex: 1, marginHorizontal: 17}}>
+        {/* Searchbar Section */}
         <View style={{flexDirection: 'row', marginVertical: 10}}>
           <View style={{position: 'relative', flex: 3}}>
             <TextInput
@@ -20,7 +25,7 @@ const App = () => {
               }}
             />
             <Image
-              source={require('./image/search.png')}
+              source={require('./src/assets/image/search.png')}
               style={{position: 'absolute', top: 14, left: 15}}
             />
           </View>
@@ -30,9 +35,10 @@ const App = () => {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Image source={require('./image/promo.png')} />
+            <Image source={require('./src/assets/image/promo.png')} />
           </View>
         </View>
+        {/* gopay section */}
         <View>
           <View
             style={{
@@ -46,7 +52,7 @@ const App = () => {
             }}>
             <View style={{flexDirection: 'row'}}>
               <Image
-                source={require('./image/wallet.png')}
+                source={require('./src/assets/image/wallet.png')}
                 style={{width: 22, height: 22}}
               />
               <Text
@@ -54,7 +60,7 @@ const App = () => {
                   color: 'white',
                   fontWeight: 'bold',
                   fontSize: 15,
-                  marginLeft: 3,
+                  marginLeft: 5,
                 }}>
                 gopay
               </Text>
@@ -72,101 +78,71 @@ const App = () => {
               borderBottomRightRadius: 5,
               borderBottomLeftRadius: 5,
             }}>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={require('./image/pay.png')} />
-              <Text
-                style={{
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontSize: 12,
-                  marginTop: 7,
-                }}>
-                Pay
-              </Text>
-            </View>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={require('./image/promo2.png')} />
-              <Text
-                style={{
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontSize: 12,
-                  marginTop: 7,
-                }}>
-                Promo
-              </Text>
-            </View>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={require('./image/topup.png')} />
-              <Text
-                style={{
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontSize: 12,
-                  marginTop: 7,
-                }}>
-                Top Up
-              </Text>
-            </View>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={require('./image/more.png')} />
-              <Text
-                style={{
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontSize: 12,
-                  marginTop: 7,
-                }}>
-                More
-              </Text>
-            </View>
+            <Gopay_feature
+              title="Pay"
+              image={require('./src/assets/image/pay.png')}
+            />
+            <Gopay_feature
+              title="Promo"
+              image={require('./src/assets/image/promo2.png')}
+            />
+            <Gopay_feature
+              title="Top Up"
+              image={require('./src/assets/image/topup.png')}
+            />
+            <Gopay_feature
+              title="More"
+              image={require('./src/assets/image/more2.png')}
+            />
           </View>
+        </View>
+        {/* Gojek Feature Section */}
+        <View
+          style={{
+            flexDirection: 'row',
+            marginTop: 20,
+          }}>
+          <Gojek_feature
+            title="GoRide"
+            image={require('./src/assets/image/gojek.png')}
+          />
+          <Gojek_feature
+            title="GoCar"
+            image={require('./src/assets/image/gocar.png')}
+          />
+          <Gojek_feature
+            title="GoFood"
+            image={require('./src/assets/image/food.png')}
+          />
+          <Gojek_feature
+            title="GoBluebird"
+            image={require('./src/assets/image/gocar.png')}
+          />
         </View>
         <View
           style={{
             flexDirection: 'row',
             marginTop: 20,
           }}>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/gojek.png')} />
-            <Text style={{marginTop: 10}}>GoRide</Text>
-          </View>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/gocar.png')} />
-            <Text style={{marginTop: 10}}>GoCar</Text>
-          </View>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/food.png')} />
-            <Text style={{marginTop: 10}}>GoFood</Text>
-          </View>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/gocar.png')} />
-            <Text style={{marginTop: 10}}>GoBluebird</Text>
-          </View>
+          <Gojek_feature
+            title="GoSend"
+            image={require('./src/assets/image/gosend.png')}
+          />
+          <Gojek_feature
+            title="GoPulsa"
+            image={require('./src/assets/image/gopulsa.png')}
+          />
+          <Gojek_feature
+            title="GoPoints"
+            image={require('./src/assets/image/gopoints.png')}
+          />
+          <Gojek_feature
+            title="More"
+            image={require('./src/assets/image/more.png')}
+          />
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: 20,
-          }}>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/gosend.png')} />
-            <Text style={{marginTop: 10}}>GoSend</Text>
-          </View>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/gopulsa.png')} />
-            <Text style={{marginTop: 10}}>GoPulsa</Text>
-          </View>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/gopoints.png')} />
-            <Text style={{marginTop: 10}}>GoPoints</Text>
-          </View>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <Image source={require('./image/more.png')} />
-            <Text style={{marginTop: 10}}>MORE</Text>
-          </View>
-        </View>
-        <View style={{marginTop: 25}}>
+        {/* Banner Section */}
+        <View style={{marginVertical: 25}}>
           <Text
             style={{
               fontSize: 20,
@@ -178,8 +154,13 @@ const App = () => {
             Top picks for you
           </Text>
           <Image
-            style={{height: 150, width: 350, marginVertical: 10}}
-            source={require('./image/bannerfood.jpg')}
+            style={{
+              height: 150,
+              width: '100%',
+              marginVertical: 10,
+              borderRadius: 7,
+            }}
+            source={require('./src/assets/image/bannerfood.jpg')}
           />
           <Text style={{fontWeight: 'bold'}}>Everyday is happy-tummy day!</Text>
           <Text>
@@ -195,64 +176,69 @@ const App = () => {
             <Button color="green" title="Buy voucher" />
           </View>
         </View>
+        {/* Recommended Restos Section */}
+        <View style={{borderTopWidth: 1, borderColor: '#d9d9d9'}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: 10,
+              alignItems: 'center',
+            }}>
+            <Image
+              style={{width: 15, height: 15, marginRight: 5}}
+              source={require('./src/assets/image/food.png')}
+            />
+            <Text style={{fontWeight: 'bold'}}>gofood</Text>
+          </View>
+          <Text style={{fontWeight: 'bold'}}>Recommended restos</Text>
+          <ScrollView
+            horizontal
+            style={{
+              flexDirection: 'row',
+              marginVertical: 10,
+            }}>
+            <Resto
+              title="McDonald's"
+              image={require('./src/assets/image/mcd.jpg')}
+            />
+            <Resto
+              title="Pizza Hut Delivery"
+              image={require('./src/assets/image/phd.jpg')}
+            />
+            <Resto
+              title="Carl's Jr."
+              image={require('./src/assets/image/carls.jpg')}
+            />
+          </ScrollView>
+        </View>
       </ScrollView>
+      {/* Bottom Navbar Section */}
       <View
         style={{
           height: 54,
           flexDirection: 'row',
           alignItems: 'center',
         }}>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Image
-            style={{width: 26, height: 26}}
-            source={require('./image/home.png')}
-          />
-          <Text
-            style={{
-              fontSize: 10,
-              color: '#545454',
-              marginTop: 4,
-              color: '#43AB4A',
-            }}>
-            Home
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Image
-            style={{width: 26, height: 26}}
-            source={require('./image/order.png')}
-          />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Orders
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Image
-            style={{width: 26, height: 26}}
-            source={require('./image/chat.png')}
-          />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Chat
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Image
-            style={{width: 26, height: 26}}
-            source={require('./image/inbox.png')}
-          />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Inbox
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Image
-            style={{width: 26, height: 26}}
-            source={require('./image/account.png')}
-          />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Account
-          </Text>
-        </View>
+        <Navbar_icon
+          title="Home"
+          image={require('./src/assets/image/home-active.png')}
+        />
+        <Navbar_icon
+          title="Orders"
+          image={require('./src/assets/image/order.png')}
+        />
+        <Navbar_icon
+          title="Chat"
+          image={require('./src/assets/image/chat.png')}
+        />
+        <Navbar_icon
+          title="Inbox"
+          image={require('./src/assets/image/inbox.png')}
+        />
+        <Navbar_icon
+          title="Account"
+          image={require('./src/assets/image/account.png')}
+        />
       </View>
     </View>
   );

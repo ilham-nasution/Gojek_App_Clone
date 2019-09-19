@@ -1,16 +1,12 @@
 import React from 'react';
-import {Text, View, Button} from 'react-native';
+import {Text, View} from 'react-native';
 import Navbar_icon from '../components/Navbar_icon';
 
-const Orders = props => {
+const Chat = props => {
   return (
     <View style={{flex: 1}}>
       <View style={{flex: 1}}>
-        <Text>Halaman Orders!</Text>
-        <Button
-          title="Detail Order"
-          onPress={() => props.navigation.navigate('DetailOrder')}
-        />
+        <Text>Halaman Chat!</Text>
       </View>
       <View
         style={{
@@ -24,11 +20,12 @@ const Orders = props => {
           onPress={() => props.navigation.navigate('Home')}
         />
         <Navbar_icon
-          active
           title="Orders"
           image={require('../assets/image/order.png')}
+          onPress={() => props.navigation.navigate('Orders')}
         />
         <Navbar_icon
+          active
           title="Chat"
           image={require('../assets/image/chat.png')}
           onPress={() => props.navigation.navigate('Chat')}
@@ -48,4 +45,4 @@ const Orders = props => {
   );
 };
 
-export default Orders;
+export default Chat;

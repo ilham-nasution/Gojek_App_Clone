@@ -155,14 +155,17 @@ export class Home extends Component {
           <Navbar_icon
             title="Chat"
             image={require('../assets/image/chat.png')}
+            onPress={() => this.props.navigation.navigate('Chat')}
           />
           <Navbar_icon
             title="Inbox"
             image={require('../assets/image/inbox.png')}
+            onPress={() => this.props.navigation.navigate('Inbox')}
           />
           <Navbar_icon
             title="Account"
             image={require('../assets/image/account.png')}
+            onPress={() => this.props.navigation.navigate('Account')}
           />
         </View>
       </View>
